@@ -1,0 +1,16 @@
+body {
+    background-color: rgb(185, 226, 185);
+}
+h1 {
+    font-family: monospace;
+}
+h2 {
+    font-family: monospace;
+}
+h3 {
+    font-family: monospace;
+}
+p {
+    font-size: 120%;
+    font-family: monospace;
+}
