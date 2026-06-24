@@ -1,53 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-    <title>Hymelhan | Map</title>
-    <link rel="icon" href="assets/logo.png" type="image/png" />
-<head>
+    <head>
+        <title>Hymelhan | Home</title>
+        <link rel="icon" href="assets/logo.png" type="image/png"/>
+        <link rel="stylesheet" href="styles.css"/>
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous">
+        </script>
+        <script> 
+            $(function(){
+                $("#header").load("header.html"); 
+                $("#footer").load("footer.html"); 
+            });
+        </script> 
+        <style>
+            #map {
+                color: rgb(109, 202, 245);
+            }
+            #map:hover {
+                background-color: black;
+            }
+        </style>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-* {box-sizing: border-box;}
-
-.img-zoom-container {
-  position: relative;
-}
-
-.img-zoom-lens {
-  position: absolute;
-  border: 1px solid #d4d4d4;
-  /*set the size of the lens:*/
-  width: 40px;
-  height: 40px;
-}
-
-.img-zoom-result {
-  border: 1px solid #d4d4d4;
-  /*set the size of the result div:*/
-  width: 300px;
-  height: 300px;
-}
-</style>
 <script>
-function imageZoom(imgID, resultID) {
-  var img, lens, result, cx, cy;
-  img = document.getElementById(imgID);
-  result = document.getElementById(resultID);
-  /*create lens:*/
-  lens = document.createElement("DIV");
-  lens.setAttribute("class", "img-zoom-lens");
-  /*insert lens:*/
-  img.parentElement.insertBefore(lens, img);
-  /*calculate the ratio between result DIV and lens:*/
-  cx = result.offsetWidth / lens.offsetWidth;
-  cy = result.offsetHeight / lens.offsetHeight;
-  /*set background properties for the result DIV:*/
-  result.style.backgroundImage = "url('" + img.src + "')";
-  result.style.backgroundSize = (img.width * cx) + "px " + (img.height * cy) + "px";
-  /*execute a function when someone moves the cursor over the image, or the lens:*/
-  lens.addEventListener("mousemove", moveLens);
-  img.addEventListener("mousemove", moveLens);
-  /*and also for touch screens:*/
-  lens.addEventListener("touchmove", moveLens);
-  img.addEventListener("touchmove", moveLens);
+  function imageZoom(imgID, resultID) {
+    var img, lens, result, cx, cy;
+    img = document.getElementById(imgID);
+    result = document.getElementById(resultID);
+    /*create lens:*/
+    lens = document.createElement("DIV");
+    lens.setAttribute("class", "img-zoom-lens");
+    /*insert lens:*/
+    img.parentElement.insertBefore(lens, img);
+    /*calculate the ratio between result DIV and lens:*/
+    cx = result.offsetWidth / lens.offsetWidth;
+    cy = result.offsetHeight / lens.offsetHeight;
+    /*set background properties for the result DIV:*/
+    result.style.backgroundImage = "url('" + img.src + "')";
+    result.style.backgroundSize = (img.width * cx) + "px " + (img.height * cy) + "px";
+    /*execute a function when someone moves the cursor over the image, or the lens:*/
+    lens.addEventListener("mousemove", moveLens);
+    img.addEventListener("mousemove", moveLens);
+    /*and also for touch screens:*/
+    lens.addEventListener("touchmove", moveLens);
+    img.addEventListener("touchmove", moveLens);
   function moveLens(e) {
     var pos, x, y;
     /*prevent any other actions that may occur when moving over the image:*/
@@ -85,14 +83,15 @@ function imageZoom(imgID, resultID) {
 </script>
 </head>
 <body>
-<div class="img-zoom-container">
-  <img id="myimage" src="assets/map.webp" width="750">
-  <div id="myresult" class="img-zoom-result"></div>
-</div>
-<script>
+<div id="header"></div>
+  <div class="img-zoom-container">
+    <img id="myimage" class="img-hymelhan-map" src="assets/map.webp" style="width: 900px;">
+    <div id="myresult" class="img-zoom-result"></div>
+    <script>
 // Initiate zoom effect:
 imageZoom("myimage", "myresult");
 </script>
-
+  </div>
+        <div id="footer"></div>
 </body>
 </html>
