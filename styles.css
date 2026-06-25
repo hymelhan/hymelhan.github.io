@@ -18,6 +18,9 @@ p {
     font-size: 120%;
     font-family: monospace;
 }
+a {
+    font-family: monospace;
+}
 .header {
     list-style-type: none;
     overflow: hidden;
