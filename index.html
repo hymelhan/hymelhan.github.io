@@ -15,6 +15,20 @@
                 $("#footer").load("footer.html"); 
             });
         </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const images = [
+                        "assets/bg/ahkol-manor.png",
+                        "assets/bg/spawn-tower.png",
+                        "assets/bg/farm-house.png",
+                        "assets/bg/riahnir.png",
+                        "assets/bg/river.png"
+                    ];
+                const randomImage = images[Math.floor(Math.random() * images.length)];
+                document.querySelector(".home-parallax-bg").style.backgroundImage =
+                `url("${randomImage}")`;
+            });
+        </script>
         <style>
             #home {
                 color: #a134cf;
@@ -27,8 +41,120 @@
     <body>
         <div id="header"></div>
         <div class="content">
-            <div margin: 0; padding: 0;">
-                <img src="assets/home-background.png" alt="Hymelhan spawn" style="width: 90%; height: auto; display: flex; justify-self: center;">
+            <div class="home-parallax">
+                <div class="home-parallax-bg">
+                    <div class="home-title"><h1>The Fall of Hymelhan</h1></div>
+                </div>
+            </div>
+            <div style="width: 100%; background-color: rgb(22, 22, 22);">
+                <div class="home-about-box">
+                    <h2>About</h2>
+                    <div>
+                        <h3>Lorem Ipsum</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <h3>Lorem Ipsum</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <h3>Lorem Ipsum</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <h3>Lorem Ipsum</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <div class="home-gallery">
+                        <div id="arrow-left" class="arrow"></div>
+                        <div class="slider">
+                            <div class="slide" style="background-image: url(assets/bg/ahkol-manor.png)"></div>
+                            <div class="slide" style="background-image: url(assets/bg/farm-house.png)"></div>
+                            <div class="slide" style="background-image: url(assets/bg/riahnir.png)"></div>
+                            <div class="slide" style="background-image: url(assets/bg/river.png)"></div>
+                            <div class="slide" style="background-image: url(assets/bg/spawn-tower.png)"></div>
+                        </div>
+                        <div id="arrow-right" class="arrow"></div>
+                        <script>
+                            document.addEventListener("DOMContentLoaded", () => {
+                                const slides = document.querySelectorAll(".slide");
+                                const left = document.querySelector("#arrow-left");
+                                const right = document.querySelector("#arrow-right");
+                                let current = 0;
+                                function update() {
+                                    slides.forEach(s => {
+                                        s.className = "slide";
+                                    });
+                                    let prev = (current - 1 + slides.length) % slides.length;
+                                    let next = (current + 1) % slides.length;
+                                    slides[current].classList.add("active");
+                                    slides[prev].classList.add("left");
+                                    slides[next].classList.add("right");
+                                }
+                                left.addEventListener("click", () => {
+                                    current = (current - 1 + slides.length) % slides.length;
+                                    update();
+                                });
+                                right.addEventListener("click", () => {
+                                    current = (current + 1) % slides.length;
+                                    update();
+                                });
+                                update();
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div style="width: 100; margin: 20px 0;">
+                <div class="home-team-box">
+                    <h2>The Team</h2>
+                    <p style="margin-bottom: 30px;">Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus.</p>
+                    <div class="home-team-pfp-box">
+                        <div class="home-team-pfp">
+                            <img src="assets/team-pfp/swerving.png" alt="The frog" style="width: 200px; height: 200px; border-radius: 50%;">
+                            <h3>SwervingSho3</h3>
+                        </div>
+                        <div class="home-team-pfp">
+                            <img src="assets/team-pfp/anelo.png" alt="The frog" style="width: 200px; height: 200px; border-radius: 50%;">
+                            <h3>anelo99</h3>
+                        </div>
+                        <div class="home-team-pfp">
+                            <img src="assets/team-pfp/sbtree.png" alt="The frog" style="width: 200px; height: 200px; border-radius: 50%;">
+                            <h3>SBtree</h3>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="home-team-pfp-box">
+                        <div class="home-team-pfp">
+                            <img src="assets/team-pfp/magic.png" alt="The frog" style="width: 200px; height: 200px; border-radius: 50%;">
+                            <h3>magicmeowkins</h3>
+                        </div>
+                        <div class="home-team-pfp">
+                            <img src="assets/team-pfp/sadin.png" alt="The frog" style="width: 200px; height: 200px; border-radius: 50%;">
+                            <h3>Sadin2</h3>
+                        </div>
+                        <div class="home-team-pfp">
+                            <img src="assets/team-pfp/rex.png" alt="The frog" style="width: 200px; height: 200px; border-radius: 50%;">
+                            <h3>Rex_59515</h3>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="home-team-pfp-box">
+                        <div class="home-team-pfp">
+                            <img src="assets/team-pfp/franklo.png" alt="The frog" style="width: 200px; height: 200px; border-radius: 50%;">
+                            <h3>Franklo784</h3>
+                        </div>
+                        <div class="home-team-pfp">
+                            <img src="assets/team-pfp/val.png" alt="The frog" style="width: 200px; height: 200px; border-radius: 50%;">
+                            <h3>Evil_Valerypire</h3>
+                        </div>
+                        <div class="home-team-pfp">
+                            <img src="assets/team-pfp/just2.png" alt="The frog" style="width: 200px; height: 200px; border-radius: 50%;">
+                            <h3>Just2UDC</h3>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="home-team-pfp-box" style="justify-content: center;">
+                        <div class="home-team-pfp">
+                            <img src="assets/team-pfp/debogged.png" alt="The frog" style="width: 200px; height: 200px; border-radius: 50%;">
+                            <h3>Debogged_</h3>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div id="footer"></div>

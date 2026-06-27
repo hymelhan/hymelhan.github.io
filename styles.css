@@ -7,12 +7,15 @@ body {
 }
 h1 {
     font-family: monospace;
+    font-size: 50px;
 }
 h2 {
     font-family: monospace;
+    font-size: 40px;
 }
 h3 {
     font-family: monospace;
+    font-size: 20px;
 }
 p {
     font-size: 120%;
@@ -38,6 +41,7 @@ a:hover {
     position: fixed;
     width: 100%;
     box-shadow: 0 0px 5px rgb(32, 32, 32);
+    z-index: 1000;
 }
 .header li {
     display: inline-block;
@@ -70,6 +74,162 @@ a:hover {
 .content {
     padding-top: 70px
 }
+.home-parallax {
+    width: 100%;
+    background-color: rgb(22, 22, 22);
+}
+.home-title {
+    display: flex;
+    margin: 0 auto;
+    height: 830px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.home-title h1 {
+    margin: 0;
+    width: 350px;
+}
+.home-parallax-bg {
+    min-height: 830px;
+    width: 90%;
+    margin: auto;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.home-about-box {
+    width: 60%;
+    margin: auto;
+    padding-bottom: 20px;
+}
+.home-about-box h2 {
+    color: #a134cf;
+    padding-top: 15px;
+    margin: 0;
+    text-align: center;
+}
+.home-about-box h3 {
+    color: #a134cf;
+    margin-bottom: 5px;
+}
+.home-about-box p {
+    margin: 0;
+    color: white;
+}
+.home-gallery {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    cursor: pointer;
+}
+#arrow-left {
+    border-width: 20px 30px 20px 0;
+    border-color: transparent #fff transparent transparent;
+    left: 0;
+    margin-left: 20px;
+    position: absolute;
+    z-index: 10;
+    border-style: solid;
+}
+#arrow-right {
+    border-width: 20px 0 20px 30px;
+    border-color: transparent transparent transparent #fff;
+    right: 0;
+    margin-right: 20px;
+    z-index: 10;
+    border-style: solid;
+}
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.slide {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    height: 80%;
+    background-size: cover;
+    background-position: center;
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+    transition: all 0.5s ease;
+    filter: blur(1px);
+}
+.slide.active {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    z-index: 3;
+    filter: none;
+}
+.slide.left {
+    transform: translate(-120%, -50%) scale(0.85);
+    opacity: 0.4;
+    z-index: 2;
+}
+.slide.right {
+    transform: translate(20%, -50%) scale(0.85);
+    opacity: 0.4;
+    z-index: 2;
+}
+.home-team-box {
+    background-color: rgb(22, 22, 22);
+    width: 60%;
+    margin: auto;
+    padding-bottom: 1px;
+}
+.home-team-box h2 {
+    color: #a134cf;
+    padding-top: 15px;
+    margin: 0;
+    text-align: center;
+}
+.home-team-box h3 {
+    color: white;
+    margin: 0;
+    text-align: center;
+}
+.home-team-box p {
+    margin: 0;
+    color: white;
+    text-align: center;
+}
+.home-team-box hr {
+    color: rgb(170, 170, 170);
+    width: 95%;
+}
+.home-team-pfp-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 10%;
+    margin: 50px 0;
+}
+.home-team-pfp {
+    width: 200px;
+}
+@media (max-width: 1300px) {
+    .home-team-pfp-box {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px
+    }
+    .home-team-box hr {
+        display: none;
+    }
+}
 .footer {
     background-color: rgb(32, 32, 32);
     color: white;
@@ -93,6 +253,7 @@ a:hover {
 .footer-logo h2 {
     margin: auto 0;
     width: auto;
+    font-size: 16px;
 }
 .footer-links {
     overflow: hidden;
@@ -149,12 +310,6 @@ a:hover {
 }
 .footer-socials a:last-child {
     margin-left: 20px;
-}
-.footer h3 {
-    margin: 0;
-    margin-top: 15px;
-    font-size: 16px;
-    text-decoration: underline;
 }
 .footer p {
     margin: 0;
