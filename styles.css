@@ -220,6 +220,10 @@ a:hover {
 .home-team-pfp {
     width: 200px;
 }
+.home-team-pfp a:hover {
+    text-decoration: underline;
+    color: white;
+}
 @media (max-width: 1300px) {
     .home-team-pfp-box {
         flex-direction: column;
@@ -229,6 +233,66 @@ a:hover {
     .home-team-box hr {
         display: none;
     }
+}
+.team-box {
+    background-color: rgb(22, 22, 22);
+    width: 100%;
+    min-height: 250px;
+    margin: 20px;
+}
+.team-box h1 {
+    color: black;
+}
+.team-box h2 {
+    color: white;
+    margin: 0;
+    float: left;
+}
+.team-box p {
+    color: white;
+    font-size: 16px;
+    padding-right: 100px;
+}
+.team-skin {
+    height: 100%;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    float: left;
+}
+.team-skin img {
+    margin: 20px;
+    height: 200px;
+    width: auto;
+}
+.team-box-title {
+    padding-top: 20px;
+}
+.team-box-socials {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.team-box-socials a {
+    padding-left: 20px;
+}
+.team-box-socials img {
+    height: 60px;
+    width: 60px;
+}
+.tag-box {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.tag {
+    background-color: #a134cf;
+    border-radius: 25px;
+    display: inline-block;
+}
+.tag p {
+    margin: 1px 5px;
+    padding: 0;
 }
 .footer {
     background-color: rgb(32, 32, 32);
