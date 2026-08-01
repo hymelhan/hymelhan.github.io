@@ -8,22 +8,26 @@ body {
 h1 {
     font-family: monospace;
     font-size: 50px;
+    color: white;
 }
 h2 {
     font-family: monospace;
     font-size: 40px;
+    color: white;
 }
 h3 {
     font-family: monospace;
     font-size: 20px;
+    color: white;
 }
 p {
-    font-size: 120%;
+    font-size: 15px;
     font-family: monospace;
+    color: white;
 }
 a {
     font-family: monospace;
-    color: black;
+    color: white;
     text-decoration: none;
 }
 a:hover {
@@ -60,7 +64,6 @@ a:hover {
 }
 .header li a {
     display: block;
-    color: white;
     text-align: center;
     padding: 15px;
     text-decoration: none;
@@ -116,7 +119,6 @@ a:hover {
 }
 .home-about-box p {
     margin: 0;
-    color: white;
 }
 .home-gallery {
     position: relative;
@@ -195,13 +197,11 @@ a:hover {
     text-align: center;
 }
 .home-bottom h3 {
-    color: white;
     margin: 0;
     text-align: center;
 }
 .home-bottom p {
     margin: 0;
-    color: white;
     text-align: center;
 }
 .home-bottom hr {
@@ -244,6 +244,51 @@ a:hover {
     .home-team-box hr {
         display: none;
     }
+}
+.download-box {
+     width: 80%;
+     margin: 20px auto;
+     display: flex;
+     flex-direction: row;
+}
+.download-latest-box {
+    width: 50%;
+    min-height: 600px;
+    background-color: rgba(22, 22, 22, 0.8);
+    text-align: center;
+}
+.download-info-box {
+    width: 50%;
+    min-height: 600px;
+    background-color: rgb(22, 22, 22);
+}
+.download-box h1 {
+    margin: 20px 0 0
+}
+.download-box h2 {
+    margin: 10px 0 0;
+    font-size: 35px;
+}
+.download-box p {
+    margin: 0;
+}
+.download-button {
+    background-color: #a134cf;
+    border-radius: 10px;
+    width: 450px;
+    height: 50px;
+    margin: 15px auto 0;
+    display: flex;
+    flex-direction: row;
+}
+.download-button:hover {
+    background-color: #932dc3;
+    /*box-shadow: 3px 3px 2px #3b1468 inset;*/
+}
+.download-button p {
+    font-size: 20px;
+    font-weight: bold;
+    margin: auto 0;
 }
 .team-box {
     background-color: rgb(22, 22, 22);
@@ -317,6 +362,9 @@ a:hover {
     background-color: rgb(32, 32, 32);
     color: white;
     box-shadow: 0 -0 5px rgb(32, 32, 32);
+}
+.footer h3 {
+    margin-bottom: 5px;
 }
 .footer-space {
     padding: 20px 80px 5px 80px;

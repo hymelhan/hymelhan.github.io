@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Hymelhan | Download</title>
+        <link rel="icon" href="assets/logo.png" type="image/png"/>
+        <link rel="stylesheet" href="styles.css"/>
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous">
+        </script>
+        <script> 
+            $(function(){
+                $("#header").load("header.html"); 
+                $("#footer").load("footer.html"); 
+            });
+        </script>
+        <style>
+            #download {
+                color: #a134cf;
+            }
+            #download:hover {
+                background-color: rgb(32, 32, 32);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header"></div>
+        <div class="content">
+            <div class="download-box">
+                <div class="download-latest-box">
+                    <h1>Latest Version</h1>
+                    <h2>Modpack</h2>
+                    <p>Download the ready to play modpack</p>
+                    <div class="download-button">
+                        <img src="assets/download.svg" alt="Download icon" style="height: 40px; width: 40px; margin: 5px 20px;">
+                        <p>Full modpack (.mrpack)</p>
+                        <img src="assets/info.svg" alt="Info" style="height: 20px; width: 20px; margin: 2px 2px auto auto;" title="Contains all required mods with the addition of QoL and perfomance mod">
+                    </div>
+                    <div class="download-button">
+                        <img src="assets/download.svg" alt="Download icon" style="height: 40px; width: 40px; margin: 5px 20px;">
+                        <p>Minimal modpack (.mrpack)</p>
+                        <img src="assets/info.svg" alt="Info" style="height: 20px; width: 20px; margin: 2px 2px auto auto;" title="Only Contains required mods">
+                    </div>
+                    <h2>Files</h2>
+                    <p>Download each individual files</p>
+                    <div class="download-button">
+                        <img src="assets/download.svg" alt="Download icon" style="height: 40px; width: 40px; margin: 5px 20px;">
+                        <p>World file (.zip)</p>
+                        <img src="assets/info.svg" alt="Info" style="height: 20px; width: 20px; margin: 2px 2px auto auto;" title="Contains the world file, the datapack and the resourcepack">
+                    </div>
+                    <div class="download-button">
+                        <img src="assets/download.svg" alt="Download icon" style="height: 40px; width: 40px; margin: 5px 20px;">
+                        <p>Datapack (.zip)</p>
+                        <img src="assets/info.svg" alt="Info" style="height: 20px; width: 20px; margin: 2px 2px auto auto;" title="Contains the Hymelhan datapack">
+                    </div>
+                    <div class="download-button">
+                        <img src="assets/download.svg" alt="Download icon" style="height: 40px; width: 40px; margin: 5px 20px;">
+                        <p>Resourcepack (.zip)</p>
+                        <img src="assets/info.svg" alt="Info" style="height: 20px; width: 20px; margin: 2px 2px auto auto;" title="Contains the Hymelhan resourcepack">
+                    </div>
+                </div>
+                <div class="download-info-box"></div>
+            </div>
+        </div>
+        <div id="footer"></div>
+    </body>
+</html>
