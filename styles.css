@@ -269,31 +269,28 @@ a:hover {
     text-align: center;
     padding: 0 20px;
 }
-.download-button {
-    background-color: #a134cf;
-    border-radius: 10px;
-    width: 450px;
-    height: 50px;
-    margin: 15px auto 0;
-    display: flex;
-    flex-direction: row;
-    border: none;
-}
-.download-button:hover {
-    background-color: #822abc;
-    /*box-shadow: 3px 3px 2px #3b1468 inset;*/
-}
-.download-button p {
-    font-size: 20px;
-    font-weight: bold;
-    margin: auto 0;
-}
+
 .download-info-box {
     width: 50%;
     min-height: 700px;
     background-color: rgb(22, 22, 22);
     text-align: center;
     padding: 0 20px;
+}
+.socials-box {
+    background-color: rgb(22, 22, 22);
+    padding: 25px;
+    margin: 0 25px;
+}
+.socials-box h1 {
+    margin: 0;
+}
+.socials-discord-box {
+    display: flex; 
+    flex-direction: row;
+}
+.socials-youtube-box {
+    text-align: right;
 }
 .team-box {
     background-color: rgb(22, 22, 22);
@@ -451,4 +448,23 @@ a:hover {
     margin: 0;
     margin-bottom: 10px;
     font-size: 14px;
+}
+.button-450 {
+    background-color: #a134cf;
+    border-radius: 10px;
+    width: 450px;
+    height: 50px;
+    margin: 15px auto 0;
+    display: flex;
+    flex-direction: row;
+    border: none;
+}
+.button-450:hover {
+    background-color: #822abc;
+    /*box-shadow: 3px 3px 2px #3b1468 inset;*/
+}
+.button-450 p {
+    font-size: 20px;
+    font-weight: bold;
+    margin: auto 0;
 }
