@@ -269,7 +269,27 @@ a:hover {
     text-align: center;
     padding: 0 20px;
 }
-
+.download-button {
+    background-color: #a134cf;
+    width: 450px;
+    height: 50px;
+    border-radius: 10px;
+    margin: 15px auto 0;
+    border: none;
+}
+.download-button:hover {
+    background-color: #822abc;
+    /*box-shadow: 3px 3px 2px #3b1468 inset;*/
+}
+.download-button p {
+    font-size: 20px;
+    font-weight: bold;
+    margin: auto 0;
+}
+.download-link {
+    display: flex;
+    flex-direction: row;
+}
 .download-info-box {
     width: 50%;
     min-height: 700px;
@@ -288,6 +308,27 @@ a:hover {
 .socials-discord-box {
     display: flex; 
     flex-direction: row;
+}
+.socials-link {
+    display: flex;
+    flex-direction: row;
+}
+.socials-discord-button {
+    background-color: #5865f2;
+    border-radius: 10px;
+    width: 230px;
+    height: 50px;
+    margin: 25px 0;
+    border: none;
+}
+.socials-discord-button:hover {
+    background-color: #483fc6;
+    /*box-shadow: 3px 3px 2px #3b1468 inset;*/
+}
+.socials-discord-button p {
+    font-size: 20px;
+    font-weight: bold;
+    margin: auto 0;
 }
 .socials-youtube-box {
     text-align: right;
@@ -448,23 +489,4 @@ a:hover {
     margin: 0;
     margin-bottom: 10px;
     font-size: 14px;
-}
-.button-450 {
-    background-color: #a134cf;
-    border-radius: 10px;
-    width: 450px;
-    height: 50px;
-    margin: 15px auto 0;
-    display: flex;
-    flex-direction: row;
-    border: none;
-}
-.button-450:hover {
-    background-color: #822abc;
-    /*box-shadow: 3px 3px 2px #3b1468 inset;*/
-}
-.button-450 p {
-    font-size: 20px;
-    font-weight: bold;
-    margin: auto 0;
 }
