@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>YouTube Widget</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="styles.css" rel="stylesheet">
+    </head>
+    <body style="background-image: linear-gradient(#1e1f22); overflow: hidden;">
+        <div class="socials-youtube-embed">
+            <div class="socials-youtube-embed-header">
+                <img src="assets/youtube-full.svg" style="width: 124px; height: auto;">
+                <p style="margin-left: auto;"><span id="subscriber-count">Mewo</span> Subscribers</p>
+                <script>
+                    async function updateSubscriberCount() {
+                        try {
+                            const response = await fetch(
+                                "https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCiQPCOJdOll7qYxuSj_R7Kw&key=AIzaSyA7ExzQ0J7ASxBG4viFz1Q1Uw53ggJMrrs"
+                            );
+                        
+                            if (!response.ok) {
+                                throw new Error(`HTTP ${response.status}`);
+                            }
+                        
+                            const data = await response.json();
+                        
+                            document.getElementById("subscriber-count").textContent =
+                                `${Number(data.items[0].statistics.subscriberCount).toLocaleString()}`;
+                        } catch (error) {
+                            console.error(error);
+                            document.getElementById("subscriber-count").textContent =
+                                "N/A";
+                        }
+                    }
+                    updateSubscriberCount();
+                </script>
+            </div>
+            <div class="socials-youtube-embed-body">
+                <p style="margin-bottom: 12px;">LATEST DEVLOG</p>
+                <iframe src="https://www.youtube.com/embed/playlist?list=PLCoVL980y5C0" title="Latest devlog" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="margin-bottom: 20px;"></iframe>
+                <p style="margin-bottom: 12px;">LATEST UPLOAD</p>
+                <iframe src="https://www.youtube-nocookie.com/embed?listType=user_uploads&list=UCiQPCOJdOll7qYxuSj_R7Kw&key" title="Latest post" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="socials-youtube-embed-footer">
+            </div>
+        </div>
+    </body>
+</html>

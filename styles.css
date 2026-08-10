@@ -9,29 +9,38 @@ h1 {
     font-family: monospace;
     font-size: 50px;
     color: white;
+    margin: 0;
 }
 h2 {
     font-family: monospace;
     font-size: 40px;
     color: white;
+    margin: 0;
 }
 h3 {
     font-family: monospace;
     font-size: 20px;
     color: white;
+    margin: 0;
 }
 p {
     font-size: 15px;
     font-family: monospace;
     color: white;
+    margin: 0;
 }
 a {
     font-family: monospace;
     color: #ad88ed;
     text-decoration: none;
+    margin: 0;
 }
 a:hover {
     color: #a134cf;
+}
+@font-face {
+    font-family: gg sans;
+    src: url(assets/font/gg\ sans\ Regular.ttf);
 }
 .header {
     list-style-type: none;
@@ -276,6 +285,7 @@ a:hover {
     border-radius: 10px;
     margin: 15px auto 0;
     border: none;
+    transition: 0.3s;
 }
 .download-button:hover {
     background-color: #822abc;
@@ -312,6 +322,7 @@ a:hover {
 .socials-link {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 .socials-discord-button {
     background-color: #5865f2;
@@ -320,18 +331,80 @@ a:hover {
     height: 50px;
     margin: 25px 0;
     border: none;
+    transition: 0.3s;
 }
 .socials-discord-button:hover {
     background-color: #483fc6;
+    color: #dedede;
     /*box-shadow: 3px 3px 2px #3b1468 inset;*/
 }
 .socials-discord-button p {
     font-size: 20px;
     font-weight: bold;
-    margin: auto 0;
+    margin: auto;
 }
 .socials-youtube-box {
+    display: flex; 
+    flex-direction: row;
     text-align: right;
+}
+.socials-youtube-button {
+    background-color: #ff0033;
+    border-radius: 10px;
+    width: 230px;
+    height: 50px;
+    margin: 25px 0;
+    border: none;
+    transition: 0.3s;
+}
+.socials-youtube-button:hover {
+    background-color: #ce004c;
+    color: #dedede;
+    /*box-shadow: 3px 3px 2px #3b1468 inset;*/
+}
+.socials-youtube-button p {
+    font-size: 20px;
+    font-weight: bold;
+    margin: auto;
+}
+.socials-youtube-embed {
+    background-color: #1e1f22;
+}
+.socials-youtube-embed p {
+    font-family: 'gg sans';
+    font-size: 14px;
+}
+.socials-youtube-embed-header {
+    padding: 20px;
+    background-color: #ff0033;
+    width: 310px;
+    height: 34px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.socials-youtube-embed-body {
+    padding: 20px;
+    height: 387.5px;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    scrollbar-width: none;
+}
+.socials-youtube-embed-body p {
+    color: #8a8e94;
+}
+.socials-youtube-embed-body iframe {
+    width: 300px;
+    height: 168.75px;
+    border-radius: 10px;
+}
+.socials-youtube-embed-footer {
+    background-color: #1e1f22;
+    height: 42px;
+    overflow: visible;
+    box-shadow: 0 -1px 18px #151518,0 -1px 0 #151518;
+    position: relative;
+    z-index: 2;
 }
 .team-box {
     background-color: rgb(22, 22, 22);

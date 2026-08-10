@@ -34,7 +34,7 @@
                 <div class="socials-discord-box">
                     <div>
                         <h1>Discord</h1>
-                        <p style="width: 500px; margin: 0 25px 0 0;">The Hymelhan Discord server is where the community chats and hangs out. Join our <span id="member-count">Loading..</span>, give feedback on the map, share what you created, be the first notifed with Hymelhan related updates and much more! You might also see sneak peaks :eyes:</p>
+                        <p style="width: 500px; margin: 0 25px 0 0;">The Hymelhan Discord server is where the community chats and hangs out. Join our <span id="member-count">Loading..</span>, give feedback on the map, share what you created, be the first notifed with Hymelhan related updates and much more! You'll also have access to sneak peaks :eyes:</p>
                         <script>
                             async function updateMemberCount() {
                                 try {
@@ -49,7 +49,7 @@
                                     const data = await response.json();
                                 
                                     document.getElementById("member-count").textContent =
-                                        `${data.approximate_member_count.toLocaleString()} members`;
+                                        `${Number(data.approximate_member_count).toLocaleString()} members`;
                                 } catch (error) {
                                     console.error(error);
                                     document.getElementById("member-count").textContent =
@@ -62,7 +62,7 @@
                         <button type="button" class="socials-discord-button">
                             <a href="https://discord.gg/ep26BCdcpk" target="_blank">
                                 <div class="socials-link">
-                                    <img src="../assets/discord.svg" alt="Discord icon" style="height: 40px; width: 40px; margin: 5px 20px;">
+                                    <img src="../assets/discord.svg" alt="Discord icon" style="height: 40px; width: 40px; margin-left: 15px;">
                                     <p>Join now!</p>
                                 </div>
                             </a>
@@ -74,10 +74,31 @@
                         sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
                         style="width:350px; height:500px; border: none; border-radius: 5px; margin-bottom: 25px;">
                     </iframe>
+                    <img src="../assets/discord-border.svg" style="margin: auto; height: 400px; width: 400px; rotate: 15deg;">
                 </div>
                 <hr>
                 <div class="socials-youtube-box">
-                    <h1>YouTube</h1>
+                    <img src="../assets/youtube-border.svg" style="margin: auto; height: 400px; width: 400px; rotate: -15deg;">
+                    <div style="margin-left: auto; display: flex;">
+                        <iframe
+                            src="../youtube-widget.html"
+                            allowtransparency="true"
+                            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+                            style="width:350px; height:500px; border: none; border-radius: 5px; margin-top: 25px;">
+                        </iframe>
+                        <div>
+                            <h1 style="margin-top: 25px;">YouTube</h1>
+                            <p style="width: 500px; margin: 0 0 0 25px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <button type="button" class="socials-youtube-button">
+                            <a href="https://www.youtube.com/@Hymelhan" target="_blank">
+                                <div class="socials-link">
+                                    <img src="../assets/youtube.svg" alt="Discord icon" style="height: 40px; width: 40px; margin-left: 15px;">
+                                    <p>Follow now!</p>
+                                </div>
+                            </a>
+                        </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
