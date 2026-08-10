@@ -33,7 +33,8 @@ a {
     font-family: monospace;
     color: #ad88ed;
     text-decoration: none;
-    margin: 0;
+    margin: 0; /*UwU*/
+    transition: 0.3s;
 }
 a:hover {
     color: #a134cf;
@@ -79,6 +80,7 @@ a:hover {
     font-size: 20px;
     margin-top: 8px;
     color: white;
+    transition: 0.3s;
 }
 .header li a:hover {
     color: #a134cf;
