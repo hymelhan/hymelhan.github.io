@@ -57,6 +57,9 @@ a:hover {
     box-shadow: 0 0px 5px rgb(32, 32, 32);
     z-index: 1000;
 }
+.header img {
+    float: left; height: 50x; width: 50px; position: relative; margin-top: 10px; margin-right: 50px;
+}
 .header li {
     display: inline-block;
     text-align: center;
@@ -274,16 +277,16 @@ a:hover {
         display: none;
     }
     .home-team-pfp {
-        width: 800px;
+        width: 200px;
     }
     .home-team-pfp a {
-        width: 800px;
+        width: 200px;
     }
     .home-team-pfp img {
-        width: 400px;
-        height: 400px;
+        width: 200px;
+        height: 200px;
         border-radius: 50%;
-        margin: 0 200px;
+        margin: 0;
     }
 }
 .download-box {
@@ -611,7 +614,7 @@ a:hover {
     body {
         background-image: none;
         background-color: #ad88ed;
-        margin: 0px;
+        margin: 0;
         min-height: 100vh;
         display: grid;
         grid-template-rows: auto 1fr auto;
@@ -619,24 +622,24 @@ a:hover {
     }
     h1 {
         font-family: monospace;
-        font-size: 120px;
+        font-size: 40px;
         color: white;
         margin: 0;
     }
     h2 {
         font-family: monospace;
-        font-size: 80px;
+        font-size: 30px;
         color: white;
         margin: 0;
     }
     h3 {
         font-family: monospace;
-        font-size: 65px;
+        font-size: 20px;
         color: white;
         margin: 0;
     }
     p {
-        font-size: 40px;
+        font-size: 15px;
         font-family: monospace;
         color: white;
         margin: 0;
@@ -655,10 +658,11 @@ a:hover {
         list-style-type: none;
         overflow: hidden;
         background-color: rgb(32, 32, 32);
-        height: 70px;
         margin: 0;
         position: fixed;
-        width: 100%;
+        padding: 0;
+        width: 100vw;
+        height: auto;
         box-shadow: 0 0px 5px rgb(32, 32, 32);
         z-index: 1000;
     }
@@ -667,6 +671,14 @@ a:hover {
         text-align: center;
         position: relative;
         height: inherit;
+    }
+    .header img {
+        float: left;
+        height: 32px;
+        width: 32px;
+        position: relative;
+        margin: auto;
+        padding: 10px;
     }
     .header li:not(:last-child)::after {
         content: "";
@@ -680,10 +692,9 @@ a:hover {
     .header li a {
         display: block;
         text-align: center;
-        padding: 15px;
         text-decoration: none;
-        font-size: 20px;
-        margin-top: 8px;
+        font-size: 15px;
+        margin: auto 0;
         color: white;
         transition: 0.3s;
     }
@@ -694,34 +705,28 @@ a:hover {
     .content {
         padding: 0;
     }
-    .home-parallax {
-        width: 100%;
-        background-color: rgb(22, 22, 22);
-    }
     .home-title {
         display: flex;
         margin: 0 auto;
-        height: 830px;
         text-align: center;
         align-items: center;
         justify-content: center;
     }
     .home-title h1 {
         margin: 0;
-        width: 350px;
     }
     .home-parallax-bg {
         display: none;
     }
     .home-logo {
         display: inherit;
-        width: 90%;
+        width: 90vw;
         height: auto;
         margin: auto;
         padding-top: 80px
     }
     .home-about-box {
-        width: 90%;
+        width: 90vw;
         margin: auto;
         padding: 5%;
         padding-top: 0;
@@ -742,34 +747,12 @@ a:hover {
     }
     .home-gallery {
         position: relative;
-        width: 95%;
+        width: 395px;
+        height: 167px;
         overflow: hidden;
         display: flex;
         align-items: center;
         justify-content: center;
-    }
-    .arrow {
-        position: absolute;
-        top: 50%;
-        z-index: 10;
-        cursor: pointer;
-    }
-    #arrow-left {
-        border-width: 20px 30px 20px 0;
-        border-color: transparent #fff transparent transparent;
-        left: 0;
-        margin-left: 20px;
-        position: absolute;
-        z-index: 10;
-        border-style: solid;
-    }
-    #arrow-right {
-        border-width: 20px 0 20px 30px;
-        border-color: transparent transparent transparent #fff;
-        right: 0;
-        margin-right: 20px;
-        z-index: 10;
-        border-style: solid;
     }
     .slider {
         position: relative;
@@ -807,8 +790,8 @@ a:hover {
         z-index: 2;
     }
     .home-bottom {
-        width: 100%;
-        margin: 20px 0 0;
+        width: 100vw;
+        margin: 10px 0 0;
     }
     .home-bottom h2 {
         color: #a134cf;
@@ -819,22 +802,26 @@ a:hover {
     .home-bottom h3 {
         margin: 0;
         text-align: center;
-        font-size: 50px;
+        font-size: 30px;
     }
     .home-bottom p {
         text-align: center;
         margin: 0 2.5%;
     }
     .home-video-box {
-        width: 98%;
-        min-height: 80px;
-        margin: 0 auto 20px;
+        width: 100vw;
+        height: 242px;
+        margin: 0 auto 10px;
+    }
+    .home-video-box iframe {
+        width: 98vw;
+        height: 242px;
         display: flex;
         justify-content: center;
     }
     .home-team-box {
         background-color: rgb(22, 22, 22);
-        width: 100%;
+        width: 100vw;
         padding-bottom: 1px;
     }
     .footer-top {
@@ -843,8 +830,8 @@ a:hover {
         padding: 0;
     }
     .footer-logo img {
-        width: 125px;
-        height: 125px;
+        width: 60px;
+        height: 60px;
         float: left;
         padding: 10px 10px 10px 0px;
     }
@@ -865,7 +852,7 @@ a:hover {
     }
     .footer h3 {
         margin-bottom: 5px;
-        font-size: 40px;
+        font-size: 27px;
         margin-top: 10px;
     }
     .footer-space {
@@ -883,7 +870,7 @@ a:hover {
     .footer-logo h2 {
         margin: auto 0;
         width: auto;
-        font-size: 50px;
+        font-size: 27px;
     }
     .footer-links {
         overflow: hidden;
@@ -894,8 +881,8 @@ a:hover {
     .footer-links a {
         color: #a134cf;
         padding: 0px 20px 0px 20px;
-        font-size: 40px;
-        margin-bottom: 20px;
+        font-size: 27px;
+        margin-bottom: 10px;
     }
     .footer-links a:hover {
         text-decoration: underline;
@@ -909,32 +896,32 @@ a:hover {
         flex-direction: column;
         justify-self: center;
         align-items: center;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
     .footer-socials {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
     .footer-socials a:last-child {
         margin-left: 20px;
     }
     .footer-socials img {
-        width: 110px;
-        height: 110px;
-        padding: 0 15px;
+        width: 60px;
+        height: 60px;
+        padding: 0 5px;
     }
     .footer p {
         margin: 0;
-        margin-bottom: 30px;
-        font-size: 30px;
+        margin-bottom: 10px;
+        font-size: 20px;
     }
     .footer p.footer-legal {
         text-decoration: none;
         margin: 0;
-        font-size: 20px;
+        font-size: 15px;
         text-align: center;
         padding-bottom: 5px;
     }
