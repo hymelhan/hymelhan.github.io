@@ -445,14 +445,22 @@ a:hover {
     position: relative;
     z-index: 2;
 }
+.team-list {
+    width: 100vw;
+    margin: 20px auto;
+}
 .team-box {
     background-color: rgb(22, 22, 22);
-    width: 100%;
-    min-height: 250px;
-    margin: 20px 0;
-    display: flex;
-    gap: 20px;
-    padding: 20px;
+    width: 58vw;
+    height: auto;
+    margin: 20px auto;
+    display: grid;
+    padding: 1vw;
+    justify-content: left;
+    align-content: start;
+    row-gap: 0;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: max-content max-content max-content 1fr;
 }
 .team-box h1 {
     color: black;
@@ -466,43 +474,49 @@ a:hover {
     color: white;
     font-size: 16px;
     padding-right: 100px;
+    grid-column: 2;
+    grid-row: 3;
+    height: fit-content;
 }
 .team-skin {
-    height: 100%;
+    height: 240px;
     width: 200px;
     display: flex;
     justify-content: center;
-    float: left;
-    flex: 0 0 200px
+    flex: 0 0 200px;
+    grid-row: 1 / 4;
+    grid-column: 1;
 }
 .team-skin img {
     margin: 20px;
     height: 200px;
     width: auto;
 }
-.team-content {
-    flex: 1;
-    min-width: 0;
-}
 .team-content-top {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    height: fit-content;
+    grid-column: 2;
 }
 .team-box-socials {
     display: flex;
     flex-direction: row;
     align-items: center;
+    grid-column: 2;
 }
 .team-box-socials img {
     height: 60px;
     width: 60px;
+    padding: 5px;
 }
 .tag-box {
     display: flex;
     flex-direction: row;
     gap: 10px;
+    height: max-content;
     flex-wrap: wrap;
+    grid-column: 2;
 }
 .tag {
     background-color: #a134cf;
@@ -510,8 +524,12 @@ a:hover {
     display: inline-block;
 }
 .tag p {
-    margin: 1px 5px;
+    margin: 1px 7px;
     padding: 0;
+}
+.team-empty {
+    grid-row: 4;
+    height: auto;
 }
 .a404-box {
     display: flex;
@@ -559,7 +577,7 @@ a:hover {
 .footer-logo h2 {
     margin: auto 0;
     width: auto;
-    font-size: 16px;
+    font-size: 20px;
 }
 .footer-links {
     overflow: hidden;
@@ -634,7 +652,7 @@ a:hover {
     }
     h2 {
         font-family: monospace;
-        font-size: 30px;
+        font-size: 6vw;
         color: white;
         margin: 0;
     }
@@ -669,7 +687,7 @@ a:hover {
         padding: 0;
         width: 100vw;
         height: auto;
-        box-shadow: 0 0px 5px rgb(32, 32, 32);
+        box-shadow: 0 0px 1.2vw rgb(32, 32, 32);
         z-index: 1000;
         align-items: center;
     }
@@ -866,10 +884,10 @@ a:hover {
         padding: 0;
     }
     .footer-logo img {
-        width: 14.4vw;
-        height: 14.4vw;
+        width: 14vw;
+        height: 14vw;
         float: left;
-        padding: 2.3vw 2.3vw 2.3vw 0;
+        padding: 1.9vw 1.9vw 1.9vw 0;
     }
     .footer-links {
         display: flex;
@@ -884,12 +902,12 @@ a:hover {
     .footer {
         background-color: rgb(32, 32, 32);
         box-shadow: 0 -0 1.1vw rgb(32, 32, 32);
-        padding: 4.7vw env(safe-area-inset-left) env(safe-area-inset-bottom) env(safe-area-inset-right);
+        padding: 4.3vw 0 env(safe-area-inset-bottom);
     }
     .footer h3 {
-        margin-bottom: 1.1vw;
-        font-size: 6.4vw;
-        margin-top: 2.3vw;
+        margin-bottom: 0.7vw;
+        font-size: 6vw;
+        margin-top: 1.9vw;
     }
     .footer-space {
         padding: 0;
@@ -906,7 +924,7 @@ a:hover {
     .footer-logo h2 {
         margin: auto 0;
         width: auto;
-        font-size: 6.4vw;
+        font-size: 6vw;
     }
     .footer-links {
         overflow: hidden;
@@ -916,9 +934,9 @@ a:hover {
     }
     .footer-links a {
         color: #a134cf;
-        padding: 0 4.7vw 0 4.7vw;
-        font-size: 6.4vw;
-        margin-bottom: 2.3vw;
+        padding: 0 4.3vw 0 4.3vw;
+        font-size: 6vw;
+        margin-bottom: 1.9vw;
     }
     .footer-links a:hover {
         text-decoration: underline;
@@ -932,33 +950,33 @@ a:hover {
         flex-direction: column;
         justify-self: center;
         align-items: center;
-        margin-bottom: 2.3vw;
+        margin-bottom: 1.9vw;
     }
     .footer-socials {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        margin-bottom: 2.3vw;
+        margin-bottom: 1.9vw;
     }
     .footer-socials a:last-child {
-        margin-left: 4.7vw;
+        margin-left: 4.3vw;
     }
     .footer-socials img {
-        width: 14.4vw;
-        height: 14.4vw;
-        padding: 0 1.1vw;
+        width: 14vw;
+        height: 14vw;
+        padding: 0 0.7vw;
     }
     .footer p {
         margin: 0;
-        margin-bottom: 2.3;
-        font-size: 4.7vw;
+        margin-bottom: 1.9vw;
+        font-size: 4.3vw;
     }
     .footer p.footer-legal {
         text-decoration: none;
         margin: 0;
-        font-size: 3.5vw;
+        font-size: 3.1vw;
         text-align: center;
-        padding-bottom: 1.1vw;
+        padding-bottom: 0.7vw;
     }
 }
