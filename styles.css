@@ -469,6 +469,7 @@ a:hover {
     color: white;
     margin: 0;
     padding-right: 20px;
+    align-self: center;
 }
 .team-box p {
     color: white;
@@ -495,8 +496,8 @@ a:hover {
 .team-content-top {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    min-height: 74px;
+    align-content: center;
+    min-height: 75px;
     grid-column: 2;
 }
 .team-box-socials {
@@ -753,7 +754,7 @@ a:hover {
         width: 90vw;
         height: auto;
         margin: auto;
-        padding-top: 19.3vw
+        padding-top: 19.3vw;
     }
     .home-about-box {
         width: 90vw;
@@ -879,6 +880,104 @@ a:hover {
         width: 100vw;
         padding-bottom: 1px;
     }
+    .team-list {
+        width: 100vw;
+        margin: 20px auto;
+    }
+    .team-list h1 {
+        padding-top: 9vw;
+    }
+    .team-box {
+        background-color: rgb(22, 22, 22);
+        width: 96vw;
+        height: auto;
+        margin: 20px 0;
+        display: grid;
+        padding: 2vw;
+        justify-content: left;
+        align-content: start;
+        row-gap: 0;
+        grid-template-columns: max-content 1fr;
+        grid-template-rows: max-content 1fr max-content;
+    }
+    .team-box h2 {
+        color: white;
+        margin: 0;
+        padding-right: 20px;
+        align-self: center;
+    }
+    .team-box p {
+        color: white;
+        font-size: 16px;
+        padding-right: 0;
+        grid-column: 1 / 3;
+        grid-row: 3;
+        height: fit-content;
+        text-align: center;
+    }
+    .team-skin {
+        height: 240px;
+        width: fit-content;
+        display: flex;
+        justify-content: center;
+        flex: 0 0 200px;
+        grid-row: 1 / 3;
+        grid-column: 1;
+    }
+    .team-skin img {
+        margin: 20px;
+        height: 200px;
+        width: auto;
+    }
+    .team-content-top {
+        display: flex;
+        flex-wrap: wrap;
+        height: max-content;
+        align-content: center;
+        min-height: 75px;
+        grid-column: 2;
+    }
+    .team-box-socials {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        grid-column: 2;
+    }
+    .team-box-socials img {
+        height: 50px;
+        width: 50px;
+        padding: 5px;
+    }
+    .tag-box {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-content: start;
+        height: max-content;
+        flex-wrap: wrap;
+        grid-column: 2;
+        margin-bottom: 10px;
+    }
+    .tag {
+        background-color: #a134cf;
+        border-radius: 25px;
+        display: inline-block;
+    }
+    .tag p {
+        margin: 1px 7px;
+        padding: 0;
+    }
+    .team-empty {
+        grid-row: 4;
+        height: auto;
+    }
+    .a404-box {
+        display: flex;
+        flex-direction: row;
+        margin: 30px auto;
+        width: 50vw;
+    }
     .footer-top {
         flex-direction: column;
         align-items: center;
@@ -964,8 +1063,8 @@ a:hover {
         margin-left: 4.3vw;
     }
     .footer-socials img {
-        width: 14vw;
-        height: 14vw;
+        width: 12vw;
+        height: 12vw;
         padding: 0 0.7vw;
     }
     .footer p {
