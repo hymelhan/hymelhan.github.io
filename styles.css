@@ -460,7 +460,7 @@ a:hover {
     align-content: start;
     row-gap: 0;
     grid-template-columns: 200px 1fr;
-    grid-template-rows: max-content max-content max-content 1fr;
+    grid-template-rows: max-content max-content 1fr;
 }
 .team-box h1 {
     color: black;
@@ -496,7 +496,7 @@ a:hover {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    height: fit-content;
+    min-height: 74px;
     grid-column: 2;
 }
 .team-box-socials {
@@ -517,6 +517,7 @@ a:hover {
     height: max-content;
     flex-wrap: wrap;
     grid-column: 2;
+    margin-bottom: 10px;
 }
 .tag {
     background-color: #a134cf;
