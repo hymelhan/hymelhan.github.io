@@ -354,9 +354,15 @@ a:hover {
 .socials-box h1 {
     margin: 0;
 }
+.socials-box p {
+    width: 26vw;
+}
 .socials-discord-box {
     display: flex; 
     flex-direction: row;
+}
+.socials-discord-box p {
+    margin-right: 1.3vw;
 }
 .socials-link {
     display: flex;
@@ -383,9 +389,17 @@ a:hover {
     margin: auto;
 }
 .socials-youtube-box {
-    display: flex; 
+    display: flex;
     flex-direction: row;
     text-align: right;
+    width: max-content;
+    margin-left: auto;
+}
+#socials-youtube {
+    margin-top: 25px;
+}
+.socials-youtube-box p {
+    margin-left: 1.3vw;
 }
 .socials-youtube-button {
     background-color: #ff0033;
@@ -880,97 +894,176 @@ a:hover {
         width: 100vw;
         padding-bottom: 1px;
     }
-    .team-list {
-        width: 100vw;
-        margin: 20px auto;
-    }
-    .team-list h1 {
-        padding-top: 9vw;
-    }
-    .team-box {
+    .socials-box {
         background-color: rgb(22, 22, 22);
-        width: 96vw;
-        height: auto;
-        margin: 20px 0;
-        display: grid;
-        padding: 2vw;
-        justify-content: left;
-        align-content: start;
-        row-gap: 0;
-        grid-template-columns: max-content 1fr;
-        grid-template-rows: max-content 1fr max-content;
+        padding: 6vw;
+        width: 88vw;
     }
-    .team-box h2 {
-        color: white;
+    .socials-box h1 {
         margin: 0;
-        padding-right: 20px;
-        align-self: center;
     }
-    .team-box p {
-        color: white;
-        font-size: 16px;
-        padding-right: 0;
-        grid-column: 1 / 3;
-        grid-row: 3;
-        height: fit-content;
+    .socials-box p {
+        width: 88vw;
+        margin: 0;
+    }
+    .socials-box iframe {
+        margin: auto;
+    }
+    .socials-discord-box {
+        display: grid;
         text-align: center;
     }
-    .team-skin {
-        height: 240px;
-        width: fit-content;
-        display: flex;
-        justify-content: center;
-        flex: 0 0 200px;
-        grid-row: 1 / 3;
-        grid-column: 1;
+    .socials-discord-box h1 {
+        padding-top: 10vw;
     }
-    .team-skin img {
-        margin: 20px;
-        height: 200px;
-        width: auto;
-    }
-    .team-content-top {
-        display: flex;
-        flex-wrap: wrap;
-        height: max-content;
-        align-content: center;
-        min-height: 75px;
-        grid-column: 2;
-    }
-    .team-box-socials {
+    .socials-link {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: center;
-        grid-column: 2;
     }
-    .team-box-socials img {
+    .socials-discord-button {
+        background-color: #5865f2;
+        border-radius: 10px;
+        width: 230px;
         height: 50px;
-        width: 50px;
-        padding: 5px;
+        margin: 25px 0;
+        border: none;
+        transition: 0.3s;
     }
-    .tag-box {
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-        align-content: start;
-        height: max-content;
-        flex-wrap: wrap;
-        grid-column: 2;
-        margin-bottom: 10px;
+    .socials-discord-button:hover {
+        background-color: #483fc6;
+        color: #dedede;
+        /*box-shadow: 3px 3px 2px #3b1468 inset;*/
     }
-    .tag {
-        background-color: #a134cf;
-        border-radius: 25px;
-        display: inline-block;
+    .socials-discord-button p {
+        font-size: 20px;
+        font-weight: bold;
+        margin: auto;
     }
-    .tag p {
-        margin: 1px 7px;
-        padding: 0;
+    .socials-youtube-box {
+        display: grid;
+        text-align: center;
     }
-    .team-empty {
-        grid-row: 4;
-        height: auto;
+    #socials-youtube {
+        grid-row: 2;
+        margin-top: 0px;
+    }
+    .socials-youtube-button {
+        background-color: #ff0033;
+        border-radius: 10px;
+        width: 230px;
+        height: 50px;
+        margin: 25px 0;
+        border: none;
+        transition: 0.3s;
+    }
+    .socials-youtube-button:hover {
+        background-color: #ce004c;
+        color: #dedede;
+        /*box-shadow: 3px 3px 2px #3b1468 inset;*/
+    }
+    .socials-youtube-button p {
+        font-size: 20px;
+        font-weight: bold;
+        margin: auto;
+    }
+    .team-box {
+        width: 96vw;
+        padding: 2vw;
+    }
+    @media (orientation: portrait) {
+        .team-list {
+            width: 100vw;
+            margin: 20px auto;
+        }
+        .team-list h1 {
+            padding-top: 9vw;
+        }
+        .team-box {
+            background-color: rgb(22, 22, 22);
+            width: 96vw;
+            height: auto;
+            margin: 20px 0;
+            display: grid;
+            padding: 2vw;
+            justify-content: left;
+            align-content: start;
+            row-gap: 0;
+            grid-template-columns: max-content 1fr;
+            grid-template-rows: max-content 1fr max-content;
+        }
+        .team-box h2 {
+            color: white;
+            margin: 0;
+            padding-right: 20px;
+            align-self: center;
+        }
+        .team-box p {
+            color: white;
+            font-size: 16px;
+            padding-right: 0;
+            grid-column: 1 / 3;
+            grid-row: 3;
+            height: fit-content;
+            text-align: center;
+        }
+        .team-skin {
+            height: 240px;
+            width: fit-content;
+            display: flex;
+            justify-content: center;
+            flex: 0 0 200px;
+            grid-row: 1 / 3;
+            grid-column: 1;
+        }
+        .team-skin img {
+            margin: 20px;
+            height: 200px;
+            width: auto;
+        }
+        .team-content-top {
+            display: flex;
+            flex-wrap: wrap;
+            height: max-content;
+            align-content: center;
+            min-height: 75px;
+            grid-column: 2;
+        }
+        .team-box-socials {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            grid-column: 2;
+        }
+        .team-box-socials img {
+            height: 50px;
+            width: 50px;
+            padding: 5px;
+        }
+        .tag-box {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            align-content: start;
+            height: max-content;
+            flex-wrap: wrap;
+            grid-column: 2;
+            margin-bottom: 10px;
+        }
+        .tag {
+            background-color: #a134cf;
+            border-radius: 25px;
+            display: inline-block;
+        }
+        .tag p {
+            margin: 1px 7px;
+            padding: 0;
+        }
+        .team-empty {
+            grid-row: 4;
+            height: auto;
+        }
     }
     .a404-box {
         display: flex;
