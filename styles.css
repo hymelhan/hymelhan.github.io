@@ -372,7 +372,7 @@ a:hover {
 .socials-discord-button {
     background-color: #5865f2;
     border-radius: 10px;
-    width: 230px;
+    width: 250px;
     height: 50px;
     margin: 25px 0;
     border: none;
@@ -404,7 +404,7 @@ a:hover {
 .socials-youtube-button {
     background-color: #ff0033;
     border-radius: 10px;
-    width: 230px;
+    width: 250px;
     height: 50px;
     margin: 25px 0;
     border: none;
@@ -435,6 +435,12 @@ a:hover {
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+.socials-youtube-embed-header img {
+    transition: 0.3s;
+}
+.socials-youtube-embed-header img:hover {
+    opacity: 0.75;
 }
 .socials-youtube-embed-body {
     padding: 20px;
@@ -924,7 +930,7 @@ a:hover {
     .socials-discord-button {
         background-color: #5865f2;
         border-radius: 10px;
-        width: 230px;
+        width: 250px;
         height: 50px;
         margin: 25px 0;
         border: none;
@@ -951,7 +957,7 @@ a:hover {
     .socials-youtube-button {
         background-color: #ff0033;
         border-radius: 10px;
-        width: 230px;
+        width: 250px;
         height: 50px;
         margin: 25px 0;
         border: none;
