@@ -985,6 +985,9 @@ a:hover {
         width: 96vw;
         padding: 2vw;
     }
+    .team-box p {
+        margin: 0;
+    }
     @media (orientation: portrait) {
         .team-list {
             width: 100vw;
@@ -1020,6 +1023,7 @@ a:hover {
             grid-row: 3;
             height: fit-content;
             text-align: center;
+            margin: 0;
         }
         .team-skin {
             height: 240px;
