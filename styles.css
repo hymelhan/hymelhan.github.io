@@ -469,6 +469,9 @@ a:hover {
     width: 100vw;
     margin: 20px auto;
 }
+.team-list p {
+    margin: 0 10vw;
+}
 .team-box {
     background-color: rgb(22, 22, 22);
     width: 58vw;
@@ -972,6 +975,11 @@ a:hover {
         font-size: 20px;
         font-weight: bold;
         margin: auto;
+    }
+    @media (orientation: landscape) {
+        .team-list h1 {
+            padding-top: 10vw;
+        }
     }
     .team-box {
         width: 96vw;
